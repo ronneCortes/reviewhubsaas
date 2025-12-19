@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewHub AI | Gestão Inteligente de Reputação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script async src="https://cdn.promotekit.com/promotekit.js" data-promotekit="34366736-db89-4f51-8da4-14f8944e10aa"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          setTimeout(function () {
+              document.querySelectorAll('a[href^="https://buy.stripe.com/"]').forEach(function (link) {
+                  const oldBuyUrl = link.getAttribute("href");
+                  const referralId = window.promotekit_referral;
+                  if (!oldBuyUrl.includes("client_reference_id") && referralId) {
+                      const separator = oldBuyUrl.includes("?") ? "&" : "?";
+                      const newBuyUrl = oldBuyUrl + separator + "client_reference_id=" + referralId;
+                      link.setAttribute("href", newBuyUrl);
+                  }
+              });
+
+              document.querySelectorAll("[pricing-table-id]").forEach(function (element) {
+                  if (window.promotekit_referral) {
+                    element.setAttribute("client-reference-id", window.promotekit_referral);
+                  }
+              });
+
+              document.querySelectorAll("[buy-button-id]").forEach(function (element) {
+                  if (window.promotekit_referral) {
+                    element.setAttribute("client-reference-id", window.promotekit_referral);
+                  }
+              });
+          }, 1500);
+      });
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              slate: {
+                850: '#1e293b',
+                950: '#020617',
+              },
+              primary: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                200: '#c7d2fe',
+                300: '#a5b4fc',
+                400: '#818cf8',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+                800: '#3730a3',
+                900: '#312e81',
+                950: '#1e1b4b',
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-in': 'fadeIn 0.6s ease-out forwards',
+              'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #e2e8f0 1px, transparent 1px), linear-gradient(to bottom, #e2e8f0 1px, transparent 1px)",
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f8fafc;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+      }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      }
+
+      .bg-grid-slate {
+        background-size: 40px 40px;
+        mask-image: linear-gradient(to bottom, transparent, black, transparent);
+        -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 40%, black 70%, transparent 95%);
+      }
+      
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to right, #4f46e5, #9333ea);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-primary-100 selection:text-primary-900 overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
