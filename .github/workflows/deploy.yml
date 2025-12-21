@@ -24,7 +24,7 @@ jobs:
           npm run build
 
       - name: Enviar apenas o Build via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: appleboy/scp-action
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -33,4 +33,5 @@ jobs:
           local-dir: ./dist/ 
           server-dir: ./public_html/
           # delete-destination: true  # descomente se quiser apagar arquivos antigos
+
 
