@@ -18,20 +18,19 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Instalar dependências e gerar Build
+      - name: Instalar dependências e gerar build
         run: |
           npm install
           npm run build
 
-      - name: Enviar apenas o Build via SFTP
-        uses: appleboy/scp-action
+      - name: Enviar build via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp        
-          local-dir: ./dist/ 
-          server-dir: ./public_html/
-          # delete-destination: true  # descomente se quiser apagar arquivos antigos
-
-
+          server: ${{ secrets.FTP_SERVER }}        # IP de FTP, exemplo: 123.123.123.123
+          username: ${{ secrets.FTP_USERNAME }}    # Usuário FTP correto
+          password: ${{ secrets.FTP_PASSWORD }}    # Senha FTP correta
+          protocol: ftp                            # FTP tradicional
+          port: 21                                 # Porta padrão para FTP
+          local-dir: ./dist/                       # Pasta gerada pelo build
+          server-dir: ./public_html/               # Pasta no servidor
+          # delete-destination: true               # Opcional: apaga arquivos antigos
