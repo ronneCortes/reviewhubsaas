@@ -29,8 +29,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp        # <-- aqui diz para usar SFTP
-          port: 22              # <-- porta padrão SFTP
+          protocol: ftp        
           local-dir: ./dist/ 
           server-dir: ./public_html/
           # delete-destination: true  # descomente se quiser apagar arquivos antigos
+
