@@ -10,27 +10,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Passo 1: Pega o código do GitHub
       - name: Checkout do código
         uses: actions/checkout@v3
 
+      # Passo 2: Configura Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
+      # Passo 3: Instala dependências e gera build
       - name: Instalar dependências e gerar build
         run: |
           npm install
           npm run build
 
+      # Passo 4: Envia build via FTP
       - name: Enviar build via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}        # IP de FTP, exemplo: 123.123.123.123
-          username: ${{ secrets.FTP_USERNAME }}    # Usuário FTP correto
-          password: ${{ secrets.FTP_PASSWORD }}    # Senha FTP correta
-          protocol: ftp                            # FTP tradicional
-          port: 21                                 # Porta padrão para FTP
-          local-dir: ./dist/                       # Pasta gerada pelo build
-          server-dir: ./public_html/               # Pasta no servidor
-          # delete-destination: true               # Opcional: apaga arquivos antigos
+          server: ${{ secrets.FTP_SERVER }}      # host/IP do FTP (sem ftp://)
+          username: ${{ secrets.FTP_USERNAME }}  # usuário FTP
+          password: ${{ secrets.FTP_PASSWORD }}  # senha FTP
+          protocol: ftp                           # FTP tradicional
+          port: 21                                # porta padrão do FTP
+          local-dir: ./dist/                      # pasta gerada pelo build
+          server-dir: ./public_html/              # pasta no servidor
+          # delete-destination: true             # opcional: apaga arquivos antigos no servidor
