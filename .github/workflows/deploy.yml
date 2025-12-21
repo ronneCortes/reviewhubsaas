@@ -16,21 +16,21 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Ou a versão que você usa localmente
+          node-version: '18'
 
       - name: Instalar dependências e gerar Build
         run: |
           npm install
           npm run build
 
-      - name: Enviar apenas o Build via FTP
+      - name: Enviar apenas o Build via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # No Vite a pasta padrão é 'dist'. Certifique-se que ela existe após o build.
+          protocol: sftp        # <-- aqui diz para usar SFTP
+          port: 22              # <-- porta padrão SFTP
           local-dir: ./dist/ 
           server-dir: ./public_html/
-          # Se quiser deletar arquivos antigos no servidor que não estão no novo build:
-          # delete-destination: true
+          # delete-destination: true  # descomente se quiser apagar arquivos antigos
