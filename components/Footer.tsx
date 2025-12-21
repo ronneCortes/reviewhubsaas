@@ -1,11 +1,7 @@
 import React from 'react';
-import { Star, Mail, ArrowRight } from 'lucide-react';
+import { Star, Twitter, Linkedin, Github, Mail, ArrowRight } from 'lucide-react';
 
-interface FooterProps {
-  onNavigate: (path: string) => void;
-}
-
-export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+export const Footer: React.FC = () => {
   return (
     <footer id="footer" className="bg-slate-50 border-t border-slate-200 pt-20 pb-12 text-slate-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +18,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <p className="text-slate-500 text-sm leading-relaxed mb-8 max-w-sm">
               A plataforma completa de gestão de reputação. Colete avaliações, melhore o SEO e faça seu negócio crescer no piloto automático.
             </p>
-
+            {/* <div className="flex space-x-4">
+              <a href="#" className="h-10 w-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-600 transition-all shadow-sm" aria-label="Twitter">
+                <Twitter size={18} />
+              </a>
+              <a href="#" className="h-10 w-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-600 transition-all shadow-sm" aria-label="LinkedIn">
+                <Linkedin size={18} />
+              </a>
+              <a href="#" className="h-10 w-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-600 transition-all shadow-sm" aria-label="GitHub">
+                <Github size={18} />
+              </a>
+            </div> */}
           </div>
           
           {/* Links */}
@@ -47,9 +53,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div>
             <h4 className="font-bold text-slate-900 mb-6">Legal</h4>
             <ul className="space-y-4 text-sm">
-              <li><button onClick={() => onNavigate('/privacy-policy')} className="hover:text-indigo-600 transition-colors">Política de Privacidade</button></li>
-            <li><button onClick={() => onNavigate('/terms-of-service')} className="hover:text-indigo-600 transition-colors">Termos de Serviço</button></li>
-            <li><button onClick={() => onNavigate('/cookie-policy')} className="hover:text-indigo-600 transition-colors">Política de Cookies</button></li>
+              <li><a href="#" className="hover:text-indigo-600 transition-colors">Política de Privacidade</a></li>
+              <li><a href="#" className="hover:text-indigo-600 transition-colors">Termos de Serviço</a></li>
+              <li><a href="#" className="hover:text-indigo-600 transition-colors">Política de Cookies</a></li>
             </ul>
           </div>
         </div>
@@ -58,7 +64,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <p className="text-slate-400 text-sm">
             &copy; {new Date().getFullYear()} ReviewHub SaaS. Todos os direitos reservados.
           </p>
-
+          <div className="flex items-center gap-6">
+             <div className="flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-600 transition-colors cursor-pointer">
+                <Mail size={16} />
+                <span>info@reviewhubsaas.com</span>
+             </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -3,11 +3,12 @@ import { Check, Star, Zap, Shield, Crown } from 'lucide-react';
 import { PricingTier } from '../types';
 
 export const Pricing: React.FC = () => {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
   const tiers: PricingTier[] = [
     {
       name: "Iniciante",
-      price: "R$59.00",
+      price: billingCycle === 'monthly' ? "R$29.99" : "R$24.99",
       description: "Projetado para empresas locais prontas para assumir o controle de sua reputação e atrair mais clientes através de feedback consistente.",
       features: [
         "E-mail Mensal: 100",
@@ -20,27 +21,31 @@ export const Pricing: React.FC = () => {
     },
     {
       name: "Negócios",
-      price: "R$97.00",
-      description: "Ideal para empresas que buscam expandir sua presença online e otimizar a gestão de avaliações com recursos avançados.",
+      price: billingCycle === 'monthly' ? "R$49.99" : "R$39.99",
+      description: "Para marcas em crescimento e agências que desejam escalar sua estratégia de avaliações, otimizar operações e gerenciar múltiplos locais.",
       features: [
-        "E-mail Mensal: 500",
-        "SMS Mensal: 500",
+        "E-mail Mensal: 250",
+        "SMS Mensal: 200",
         "Whatsapp Mensal: 500",
-        "Funcionalidades: 05",
-        "Sites de Avaliação: 03"
+        "Funcionalidades: 5",
+        "Sites de Avaliação: 05",
+        "Widgets de avaliação",
+        "Dashboard de análise",
+        "Ferramentas de compartilhamento social",
+        "Respostas com IA"
       ],
       recommended: true
     },
     {
       name: "Crescimento",
-      price: "R$197.00",
-      description: "Para marcas em crescimento e agências que desejam escalar sua estratégia de avaliações, otimizar operações e gerenciar múltiplos locais.",
+      price: billingCycle === 'monthly' ? "R$198.99" : "R$159.99",
+      description: "Uma solução completa para franquias e empresas que precisam de controle avançado, automação e suporte dedicado.",
       features: [
         "E-mail Mensal: 1000",
         "SMS Mensal: 1000",
-        "Whatsapp Mensal: 1000",
-        "Funcionalidades: 10",
-        "Sites de Avaliação: 05",
+        "Whatsapp Mensal: 2000",
+        "Funcionalidades: Todas",
+        "Sites de Avaliação: 14",
         "Widgets de avaliação",
         "Dashboard de análise",
         "Ferramentas de compartilhamento social",
@@ -49,12 +54,6 @@ export const Pricing: React.FC = () => {
       recommended: false
     }
   ];
-
-  const planLinks = {
-    Iniciante: "https://buy.stripe.com/7sYcN7c955gL1kIc6ZcEw00?client_reference_id=null",
-    Negócios: "https://buy.stripe.com/fZu8wR2yvdNh1kIb2VcEw02",
-    Crescimento: "https://buy.stripe.com/3cIeVfb5138D6F20ohcEw04?client_reference_id=null"
-  };
 
   return (
     <section id="pricing" className="py-24 bg-slate-900 relative overflow-hidden">
@@ -73,6 +72,21 @@ export const Pricing: React.FC = () => {
           <p className="text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed mb-8">
             Preços simples e transparentes. Sem taxas de instalação. Cancele quando quiser.
           </p>
+
+          {/* Billing Cycle Toggle */}
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <span className={`text-sm font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-slate-400'}`}>Mensal</span>
+            <button 
+              onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+              className="relative w-16 h-8 bg-slate-700 rounded-full p-1 transition-colors hover:bg-slate-600 focus:outline-none ring-offset-2 ring-offset-slate-900 focus:ring-2 focus:ring-indigo-500"
+              aria-label="Toggle billing cycle"
+            >
+              <div className={`w-6 h-6 bg-indigo-500 rounded-full shadow-md transform transition-transform duration-300 ${billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'}`}></div>
+            </button>
+            <span className={`text-sm font-medium ${billingCycle === 'yearly' ? 'text-white' : 'text-slate-400'}`}>
+              Anual <span className="text-green-400 text-xs ml-1 font-bold">(Economize 20%)</span>
+            </span>
+          </div>
         </div>
 
         {/* Pricing Grid - Added more gap and refined vertical alignment */}
@@ -108,9 +122,9 @@ export const Pricing: React.FC = () => {
                   <span className="text-5xl font-extrabold tracking-tight">{tier.price}</span>
                   <span className={`ml-2 text-sm font-medium ${tier.recommended ? 'text-slate-500' : 'text-slate-400'}`}>/mês</span>
                 </div>
-
-                  
-
+                {billingCycle === 'yearly' && (
+                  <p className="text-xs text-green-500 font-semibold mb-4">Faturado anualmente</p>
+                )}
                 <p className={`text-sm leading-relaxed ${tier.recommended ? 'text-slate-600' : 'text-slate-300'}`}>
                   {tier.description}
                 </p>
@@ -133,13 +147,13 @@ export const Pricing: React.FC = () => {
 
               <div className="mt-auto pt-4">
                 <a 
-              href={planLinks[tier.name]}
-              className={`w-full py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mb-3 ${
+                  href="https://app.reviewhubsaas.com/register"
+                  className={`w-full py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mb-3 ${
                   tier.recommended
                     ? 'bg-slate-900 text-white hover:bg-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-1'
                     : 'bg-white/10 text-white hover:bg-white/20 border border-white/10 hover:-translate-y-1'
                 }`}>
-                  TESTE 30 DIAS GRÁTIS
+                  TESTE GRÁTIS
                 </a>
                 <p className={`text-center text-xs ${tier.recommended ? 'text-slate-500' : 'text-slate-400'}`}>Cancele a qualquer momento</p>
               </div>

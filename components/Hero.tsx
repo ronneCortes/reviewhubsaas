@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                 onClick={onCtaClick}
                 className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-1 flex items-center justify-center"
               >
-                Começar Teste Grátis
+                Teste Grátis
                 <ChevronRight className="ml-2 w-5 h-5" />
               </button>
               
