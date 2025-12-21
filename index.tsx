@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
-import MaintenancePage from './components/MaintenancePage';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -14,8 +13,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MaintenancePage />} />
-        <Route path="/main/*" element={<App />} />
+        <Route path="/*" element={<App />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
