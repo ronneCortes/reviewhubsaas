@@ -1,0 +1,98 @@
+Terms of Service for Review Hub
+
+Last updated: 06/12/2025
+
+These Terms of Service (“Terms”) govern your use of the Review Hub platform (“the Software,” “we,” “our,” “us”). By accessing or using the Software, you (“user,” “you,” “your”) agree to be bound by these Terms. If you do not agree to these Terms, you must not use the Software.
+
+1. Services Provided
+Review Hub provides local businesses with tools to manage and enhance their online reputation through the following features:
+
+Review Aggregation: Display of reviews from various platforms (e.g., Google, Facebook) in a unified interface.
+AI-Powered Review Responses: Use of artificial intelligence to generate and post responses to customer reviews.
+Review Request Campaigns: Sending of email campaigns to request reviews or feedback from end-customers, including private feedback and video testimonials via a landing page.
+Review Sharing: Sharing reviews on users’ websites via widgets and on social media by generating review-based images.
+Analytics: Access to data and reports on the performance of reviews and the overall reputation.
+Automation: Tools to automate review request processes through configurable workflows.
+2. Eligibility
+To use the Software, you must:
+
+Be at least 18 years old or the legal age of majority in your jurisdiction.
+Have the authority to enter into legally binding agreements.
+Agree to comply with these Terms and all applicable laws and regulations.
+3. Account Registration
+To access certain features of the Software, you must register for an account. You agree to:
+
+Provide accurate, complete, and up-to-date information during the registration process.
+Maintain the confidentiality of your account login credentials.
+Notify us immediately of any unauthorized use of your account or any other breach of security.
+We reserve the right to suspend or terminate your account if any information provided during registration is found to be inaccurate, false, or incomplete.
+
+4. License to Use
+We grant you a limited, non-exclusive, non-transferable, and revocable license to use the Software solely for your business purposes, subject to these Terms. You agree not to:
+
+Reproduce, distribute, or publicly display the Software or any portion thereof without our prior written consent.
+Reverse-engineer, decompile, or disassemble the Software.
+Use the Software for any unlawful purpose or in violation of any applicable laws or regulations.
+5. User-Generated Content
+By using the Software to manage and respond to reviews, send review requests, or share reviews on other platforms, you agree that:
+
+You are solely responsible for the content you upload, post, or transmit through the Software.
+You must have the right to use and share the content (e.g., reviews, testimonials, feedback) submitted through the Software.
+We may monitor, modify, or remove content that violates these Terms or applicable law, but we are not obligated to do so.
+6. Artificial Intelligence Usage
+Review Hub uses artificial intelligence (AI) to generate automatic responses to reviews. By using this feature, you agree that:
+
+AI-generated responses are based on pre-set parameters and data, and you are responsible for reviewing the responses before they are posted.
+We are not liable for any damages, claims, or disputes arising from the use of AI-generated content, including but not limited to inaccurate or inappropriate responses.
+7. Payment and Subscription
+Certain features of the Software may require payment. By subscribing to any paid services, you agree to:
+
+Pay the fees associated with your subscription plan, as outlined on our pricing page.
+Provide accurate payment information and maintain an active payment method during your subscription term.
+Acknowledge that all fees are non-refundable unless otherwise stated.
+We reserve the right to modify our pricing and subscription plans at any time. Changes to pricing will take effect at the end of your current subscription term.
+
+8. Termination
+We reserve the right to terminate or suspend your access to the Software, without notice, for any reason, including but not limited to:
+
+Violations of these Terms.
+Non-payment of fees.
+Fraudulent or unlawful activities.
+Upon termination, your license to use the Software will immediately cease, and any data associated with your account may be deleted. You are solely responsible for exporting any necessary data before termination.
+
+9. Intellectual Property
+All content and materials within the Software, including but not limited to logos, text, graphics, software, and design, are owned by Review Hub or licensed to us. You may not use any content from the Software without our express written consent, except as expressly permitted by these Terms.
+
+10. Data Privacy
+Your use of the Software is subject to our Privacy Policy, which governs how we collect, use, and protect your personal data. By using the Software, you agree to the terms of our Privacy Policy.
+
+11. Disclaimer of Warranties
+The Software is provided “as is” and “as available” without any warranties, express or implied, including but not limited to:
+
+Warranties of merchantability, fitness for a particular purpose, or non-infringement.
+Any guarantees of accuracy, reliability, or availability of the Software.
+We do not guarantee that the Software will be error-free, secure, or uninterrupted. You use the Software at your own risk.
+
+12. Limitation of Liability
+To the maximum extent permitted by law, Review Hub and its affiliates, officers, directors, employees, and agents shall not be liable for any:
+
+Indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities.
+Damages exceeding the amount you paid to use the Software in the twelve (12) months prior to the event giving rise to the claim.
+13. Indemnification
+You agree to indemnify and hold harmless Review Hub, its affiliates, officers, directors, employees, and agents from any claims, damages, liabilities, costs, and expenses (including reasonable attorneys’ fees) arising out of or related to:
+
+Your use of the Software.
+Your violation of these Terms or any applicable law.
+Any content you upload, post, or transmit via the Software.
+14. Governing Law
+These Terms and any disputes arising out of or related to them shall be governed by and construed in accordance with the laws of Estonia, without regard to its conflict of law principles.
+
+15. Dispute Resolution
+In the event of a dispute arising from these Terms, you agree to first attempt to resolve the dispute informally by contacting us at [insert contact email]. If the dispute cannot be resolved informally, you agree to submit to the exclusive jurisdiction of the courts located in Estonia.
+
+16. Changes to the Terms
+We reserve the right to modify these Terms at any time. If we make material changes, we will notify you by email or through a notice on the platform. Your continued use of the Software after the changes take effect will signify your acceptance of the updated Terms.
+
+17. Contact Information
+If you have any questions about these Terms, please contact us at info@reviewhubsaas.com.
+

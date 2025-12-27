@@ -44,6 +44,7 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-slate-900 mb-6">Suporte</h4>
             <ul className="space-y-4 text-sm">
+              <li><a href="/knowledge-base" className="hover:text-indigo-600 transition-colors">Base de Conhecimento</a></li>
               <li><a href="#" className="hover:text-indigo-600 transition-colors">Central de Ajuda</a></li>
               <li><a href="#" className="hover:text-indigo-600 transition-colors">Contato</a></li>
               <li><a href="https://app.reviewhubsaas.com/login" className="hover:text-indigo-600 transition-colors font-medium text-indigo-600">Entrar <ArrowRight size={12} className="inline ml-1"/></a></li>
@@ -53,9 +54,9 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-slate-900 mb-6">Legal</h4>
             <ul className="space-y-4 text-sm">
-              <li><a href="#" className="hover:text-indigo-600 transition-colors">Política de Privacidade</a></li>
-              <li><a href="#" className="hover:text-indigo-600 transition-colors">Termos de Serviço</a></li>
-              <li><a href="#" className="hover:text-indigo-600 transition-colors">Política de Cookies</a></li>
+              <li><a href="/privacy-policy?tab=privacy" className="hover:text-indigo-600 transition-colors">Política de Privacidade</a></li>
+              <li><a href="/privacy-policy?tab=terms" className="hover:text-indigo-600 transition-colors">Termos de Serviço</a></li>
+              <li><a href="/privacy-policy?tab=cookies" className="hover:text-indigo-600 transition-colors">Política de Cookies</a></li>
             </ul>
           </div>
         </div>

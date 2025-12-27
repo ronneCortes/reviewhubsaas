@@ -7,9 +7,9 @@ export const Pricing: React.FC = () => {
 
   const tiers: PricingTier[] = [
     {
-      name: "Iniciante",
-      price: billingCycle === 'monthly' ? "R$29.99" : "R$24.99",
-      description: "Projetado para empresas locais prontas para assumir o controle de sua reputação e atrair mais clientes através de feedback consistente.",
+      name: "EDIFICAÇÃO",
+      price: billingCycle === 'monthly' ? "R$29.00" : "R$278.00",
+      description: "Desenvolvido para negócios locais que querem assumir o controle da sua reputação online e atrair mais clientes por meio de avaliações consistentes e autênticas.",
       features: [
         "E-mail Mensal: 100",
         "SMS Mensal: 100",
@@ -17,12 +17,14 @@ export const Pricing: React.FC = () => {
         "Funcionalidades: 02",
         "Sites de Avaliação: 01"
       ],
-      recommended: false
+      recommended: false,
+      checkoutUrlMonthly: "https://buy.stripe.com/14A3cx9eP5ak6PNdcdcs800",
+      checkoutUrlYearly: "https://buy.stripe.com/cNifZjdv5auEeif1tvcs805"
     },
     {
-      name: "Negócios",
-      price: billingCycle === 'monthly' ? "R$49.99" : "R$39.99",
-      description: "Para marcas em crescimento e agências que desejam escalar sua estratégia de avaliações, otimizar operações e gerenciar múltiplos locais.",
+      name: "CRESCIMENTO",
+      price: billingCycle === 'monthly' ? "R$59.00" : "R$566.00",
+      description: "Para marcas em crescimento e agências que querem escalar sua estratégia de avaliações, otimizar operações e gerenciar múltiplas unidades com facilidade.",
       features: [
         "E-mail Mensal: 250",
         "SMS Mensal: 200",
@@ -34,12 +36,14 @@ export const Pricing: React.FC = () => {
         "Ferramentas de compartilhamento social",
         "Respostas com IA"
       ],
-      recommended: true
+      recommended: true,
+      checkoutUrlMonthly: "https://buy.stripe.com/9B67sNcr17is4HFfklcs801",
+      checkoutUrlYearly: "https://buy.stripe.com/cNieVfcr1cCMa1Zeghcs804"
     },
     {
-      name: "Crescimento",
-      price: billingCycle === 'monthly' ? "R$198.99" : "R$159.99",
-      description: "Uma solução completa para franquias e empresas que precisam de controle avançado, automação e suporte dedicado.",
+      name: "IMPACTO",
+      price: billingCycle === 'monthly' ? "R$155.00" : "R$1,488.00",
+      description: "Uma solução completa para franquias e grandes empresas que precisam de controle avançado, automação e suporte dedicado para gerenciar sua reputação em escala.",
       features: [
         "E-mail Mensal: 1000",
         "SMS Mensal: 1000",
@@ -51,7 +55,9 @@ export const Pricing: React.FC = () => {
         "Ferramentas de compartilhamento social",
         "Respostas com IA"
       ],
-      recommended: false
+      recommended: false,
+      checkoutUrlMonthly: "https://buy.stripe.com/9B65kF62DcCMgqn3BDcs802",
+      checkoutUrlYearly: "https://buy.stripe.com/cNi5kF0Ij5ak4HF8VXcs803"
     }
   ];
 
@@ -147,7 +153,7 @@ export const Pricing: React.FC = () => {
 
               <div className="mt-auto pt-4">
                 <a 
-                  href="https://app.reviewhubsaas.com/register"
+                  href={billingCycle === 'monthly' ? tier.checkoutUrlMonthly : tier.checkoutUrlYearly}
                   className={`w-full py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mb-3 ${
                   tier.recommended
                     ? 'bg-slate-900 text-white hover:bg-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-1'

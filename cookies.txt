@@ -1,0 +1,40 @@
+Cookie Policy for Review Hub
+
+Last updated: 06/12/2025
+
+Review Hub (“the Software,” “we,” “our,” “us”) uses cookies and similar technologies to improve the user experience and ensure the proper functioning of our platform. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
+
+1. What Are Cookies?
+Cookies are small text files that are stored on your device (computer, smartphone, tablet) when you visit a website. They are widely used to make websites work efficiently and to provide information to the owners of the site. Cookies can be “session cookies” (deleted when you close your browser) or “persistent cookies” (stored on your device until they expire or you delete them).
+
+2. Types of Cookies We Use
+We use the following types of cookies on the Review Hub platform:
+
+Essential Cookies: These cookies are necessary for the basic functionality of the Software. They allow you to navigate the platform, log in, and use its features. Without these cookies, certain parts of the platform would not function properly.
+Performance Cookies: These cookies collect information about how users interact with the Software, such as which pages are visited most often or if any error messages are received. The data collected is used to improve the performance and user experience of the platform.
+Functional Cookies: These cookies allow us to remember your preferences and customize your experience, such as remembering your language settings or keeping you logged in across sessions.
+Targeting/Advertising Cookies: These cookies are used to deliver personalized advertisements that are relevant to you and your interests. They also limit the number of times you see an ad and help measure the effectiveness of advertising campaigns.
+Third-Party Cookies: Some cookies may be placed by third-party services that appear on our platform, such as social media platforms or analytics providers (e.g., Google Analytics). These cookies are controlled by third parties, and their usage is governed by their respective privacy and cookie policies.
+3. How We Use Cookies
+Review Hub uses cookies to:
+
+Enhance User Experience: Ensure that the platform functions correctly and provides a smooth and customized user experience.
+Track Analytics and Performance: Gather information about how the platform is used to improve its performance, fix issues, and optimize content.
+Enable Targeted Advertising: Display relevant ads to users and track the success of our marketing efforts.
+Store User Preferences: Remember user settings and preferences, such as language choices and login information.
+4. Third-Party Cookies
+We use third-party services that may set cookies on your device, including but not limited to:
+
+Google Analytics: For tracking and reporting website traffic and user interactions with the platform. Google Analytics helps us understand how users engage with our platform so we can improve it. Google’s privacy policy is available here.
+Social Media Plugins: If you interact with content from social media platforms (e.g., by sharing reviews), those platforms may set cookies on your device. Each platform has its own privacy policy, and we encourage you to review their policies to understand how they handle your data.
+5. Your Cookie Choices
+You have several options for managing cookies:
+
+Browser Settings: Most web browsers allow you to control and delete cookies through your browser settings. You can configure your browser to notify you when cookies are being set, block all cookies, or delete existing cookies. However, if you block or delete essential cookies, some features of the Software may not work correctly.
+Third-Party Tools: You can opt out of certain third-party cookies by visiting sites like the Digital Advertising Alliance’s YourAdChoices or the Network Advertising Initiative’s Opt-Out Page.
+Consent Banners: When you first visit the platform, you will see a cookie consent banner. You can accept or decline non-essential cookies through this banner. You may also change your cookie preferences at any time by revisiting the consent banner or adjusting your settings in the platform.
+6. Changes to the Cookie Policy
+We may update this Cookie Policy from time to time to reflect changes in the cookies we use or for other operational, legal, or regulatory reasons. If we make material changes to this policy, we will notify you via a prominent notice on the platform or via email.
+
+7. Contact Information
+If you have any questions about our use of cookies or this Cookie Policy, please contact us at: info@reviewhubsaas.com
