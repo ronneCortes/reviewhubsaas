@@ -4,6 +4,8 @@ const TermsContent: React.FC = () => (
   <div className="container mx-auto px-4 py-8 max-w-3xl">
 
 
+    <h1 className="text-4xl font-bold text-slate-900 mb-6">Termos de Serviço do Review Hub</h1>
+    <p className="text-sm text-slate-600 mb-8">Última atualização: 06/12/2025</p>
 
         <h2 className="text-2xl font-semibold text-slate-900 mb-4">1. Serviços Fornecidos</h2>
         <p className="mb-4 text-slate-700 leading-relaxed">

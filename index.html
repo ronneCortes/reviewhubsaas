@@ -12,13 +12,21 @@
     <meta property="og:type" content="website" />
      <meta property="og:url" content="https://reviewhubbr.com/" />
     <meta property="og:image" content="https://reviewhubbr.com/og-image.jpg" />
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NZ3BSZDZ');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager - Conditionally loaded -->
+    <script>
+      (function() {
+        const currentPath = window.location.pathname;
+        if (currentPath !== '/thank-you' && currentPath !== '/thank-you-leads') {
+          // Original GTM script snippet
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-NZ3BSZDZ');
+        }
+      })();
+    </script>
+    <!-- End Google Tag Manager - Conditionally loaded -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

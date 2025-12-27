@@ -152,8 +152,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <button 
-              onClick={() => onNavigate('hero')}
+            <a 
+              href="/"
               className="flex items-center group focus:outline-none"
             >
               <div className="text-white p-1.5 rounded-lg mr-2 shadow-sm  transition-colors">
@@ -162,7 +162,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               <span className="text-xl font-bold tracking-tight text-slate-900 group-hover:text-indigo-600 transition-colors">
                 Review Hub
               </span>
-            </button>
+            </a>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-8">
@@ -248,14 +248,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             <div className="mobile-menu-container bg-white relative z-10">
               {/* Header do Menu */}
               <div className="flex items-center justify-between p-6 border-b border-slate-100 bg-white">
-                <div className="flex items-center">
+                <a 
+                  href="/"
+                  className="flex items-center focus:outline-none"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   <div className="bg-indigo-600 text-white p-1.5 rounded-lg mr-2 shadow-sm">
                     <Star size={18} fill="currentColor" className="text-white" />
                   </div>
                   <span className="text-lg font-bold text-slate-900">
                     Review Hub
                   </span>
-                </div>
+                </a>
                 <button
                   onClick={handleMenuToggle}
                   className="p-2 text-slate-600 hover:text-indigo-600 transition-colors"

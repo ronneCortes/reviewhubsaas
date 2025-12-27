@@ -8,6 +8,9 @@ import { Footer } from './components/Footer';
 import { Testimonials } from './components/Testimonials';
 import { AIDemo } from './components/AIDemo';
 import KnowledgeBasePage from './components/KnowledgeBasePage';
+import PopupWidget from './components/PopupWidget';
+import ThankYouPage from './components/ThankYouPage';
+import ThankYouLeadsPage from './components/ThankYouLeadsPage';
 
 import LegalPagesContainer from './components/LegalPagesContainer';
 
@@ -27,10 +30,13 @@ const App: React.FC = () => {
       currentPath.startsWith('/cookie-policy')) {
     return <LegalPagesContainer />;
   } else if (currentPath === '/knowledge-base') {
-    return <KnowledgeBasePage />;  } else {
+    return <KnowledgeBasePage />;  } else if (currentPath === '/thank-you') {
+    return <ThankYouPage />;  } else if (currentPath === '/thank-you-leads') {
+    return <ThankYouLeadsPage />;  } else {
     return (
       <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
         <Navbar onNavigate={scrollToSection} />
+        <PopupWidget />
         
         <main>
           <Hero onCtaClick={() => scrollToSection('pricing')} onDemoClick={() => scrollToSection('demo')} />
