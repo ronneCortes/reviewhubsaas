@@ -64,13 +64,7 @@ const ThankYouPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 flex flex-col items-center justify-center p-4">
-      {/* Meta tags para otimização SEO (devem ser adicionadas no Head do documento) */}
-      <head>
-        <title>Cadastro Concluído com Sucesso | ReviewHub</title>
-        <meta name="description" content="Sua conta no ReviewHub foi criada com sucesso. Acesse seu e-mail para começar a coletar avaliações e aumentar suas vendas." />
-        <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://seu-site.com/obrigado" />
-      </head>
+
 
       {/* Pixel do Facebook */}
       <noscript>
