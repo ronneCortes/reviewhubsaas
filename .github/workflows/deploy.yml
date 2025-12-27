@@ -36,5 +36,12 @@ jobs:
           protocol: ftp                           # FTP tradicional
           port: 21                                # porta padrão do FTP
           local-dir: ./dist/                      # pasta gerada pelo build
-          server-dir: ./public_html/              # pasta no servidor
+          server-dir: ./     # pasta no servidor
+          security: loose
           # delete-destination: true             # opcional: apaga arquivos antigos no servidor
+
+
+
+
+
+
