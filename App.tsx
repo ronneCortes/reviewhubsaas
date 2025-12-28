@@ -9,10 +9,11 @@ import { Testimonials } from './components/Testimonials';
 import { AIDemo } from './components/AIDemo';
 import KnowledgeBasePage from './components/KnowledgeBasePage';
 import PopupWidget from './components/PopupWidget';
-import ThankYouPage from './components/ThankYouPage';
+import ThankYouTrialPage from './components/ThankYouTrialPage';
 import ThankYouLeadsPage from './components/ThankYouLeadsPage';
-
+import ThankYouPage from './components/ThankYouPage';
 import LegalPagesContainer from './components/LegalPagesContainer';
+import NotFoundPage from './components/NotFoundPage';
 
 const App: React.FC = () => {
   
@@ -29,10 +30,11 @@ const App: React.FC = () => {
       currentPath.startsWith('/terms-of-service') ||
       currentPath.startsWith('/cookie-policy')) {
     return <LegalPagesContainer />;
-  } else if (currentPath === '/knowledge-base') {
-    return <KnowledgeBasePage />;  } else if (currentPath === '/thank-you') {
+  } else if (currentPath === '/thank-you') {
     return <ThankYouPage />;  } else if (currentPath === '/thank-you-leads') {
-    return <ThankYouLeadsPage />;  } else {
+    return <ThankYouLeadsPage />;  } else if (currentPath === '/thank-you-trial') {
+    return <ThankYouTrialPage />;  } else if (currentPath === '/knowledge-base') {
+    return <KnowledgeBasePage />;  } else if (currentPath === '/') {
     return (
       <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
         <Navbar onNavigate={scrollToSection} />
@@ -80,6 +82,8 @@ const App: React.FC = () => {
         <Footer />
       </div>
     );
+  } else {
+    return <NotFoundPage />;
   }
 };
 
