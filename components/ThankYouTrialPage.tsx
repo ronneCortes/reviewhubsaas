@@ -110,10 +110,13 @@ const ThankYouTrialPage: React.FC = () => {
               </div>
             </div>
             {/* CTA Opcional */}
-            <div className="mt-8 text-center">
-              <a href="mailto:info@reviewhubsaas.com" className="inline-flex items-center justify-center bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors shadow-lg">
+            <div className="mt-8 text-center flex flex-col items-center space-y-4">
+              <a href="mailto:info@reviewhubsaas.com?subject=Suporte%20Review%20Hub" className="inline-flex items-center justify-center bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors shadow-lg">
                 Precisa de ajuda? Fale com nosso suporte
               </a>
+              <Link to="/" className="inline-flex items-center justify-center bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition-colors shadow-lg">
+                Voltar para a Home
+              </Link>
             </div>
           </div>
         </div>

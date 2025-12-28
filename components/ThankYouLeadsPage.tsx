@@ -85,6 +85,12 @@ const ThankYouLeadsPage: React.FC = () => {
           </div>
         </div>
       </div>
+      {/* Botão Voltar para a Home */}
+      <div className="w-full text-center py-6 bg-gray-900 text-gray-400 text-sm">
+        <Link to="/" className="inline-flex items-center justify-center bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors shadow-lg">
+          Voltar para a Home
+        </Link>
+      </div>
     </div>
   );
 };

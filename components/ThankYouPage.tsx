@@ -83,6 +83,9 @@ export const ThankYouTrial: React.FC = () => {
                         <a href="mailto:suporte@reviewhubsaas.com" className="inline-flex items-center gap-2 text-indigo-600 font-bold text-sm hover:underline">
                            <HelpCircle size={16} /> Precisa de ajuda? Fale conosco
                         </a>
+                        <a href="/" className="inline-flex items-center gap-2 text-slate-600 font-bold text-sm hover:underline">
+                           Voltar para a Home
+                        </a>
                      </div>
                   </div>
                   <div className="w-px h-24 bg-slate-100 hidden md:block"></div>
