@@ -2,13 +2,24 @@ import React, { useState } from 'react';
 import { Check, Star, Zap, Shield, Crown } from 'lucide-react';
 import { PricingTier } from '../types';
 
+// Helper function to parse price string to number
+const parsePrice = (priceString: string): number => {
+  return parseFloat(priceString.replace('R$', '').replace('.', '').replace(',', '.'));
+};
+
+// Helper function to format number to Brazilian currency string
+const formatPrice = (price: number): string => {
+  return `R$${price.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+};
+
 export const Pricing: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
-  const tiers: PricingTier[] = [
+  const tiers = [
     {
       name: "EDIFICAÇÃO",
-      price: billingCycle === 'monthly' ? "R$29.00" : "R$278.00",
+      monthlyPrice: 29.00,
+      yearlyPrice: 278.00,
       description: "Desenvolvido para negócios locais que querem assumir o controle da sua reputação online e atrair mais clientes por meio de avaliações consistentes e autênticas.",
       features: [
         "E-mail Mensal: 100",
@@ -23,7 +34,8 @@ export const Pricing: React.FC = () => {
     },
     {
       name: "CRESCIMENTO",
-      price: billingCycle === 'monthly' ? "R$59.00" : "R$566.00",
+      monthlyPrice: 59.00,
+      yearlyPrice: 566.00,
       description: "Para marcas em crescimento e agências que querem escalar sua estratégia de avaliações, otimizar operações e gerenciar múltiplas unidades com facilidade.",
       features: [
         "E-mail Mensal: 250",
@@ -42,7 +54,8 @@ export const Pricing: React.FC = () => {
     },
     {
       name: "IMPACTO",
-      price: billingCycle === 'monthly' ? "R$155.00" : "R$1,488.00",
+      monthlyPrice: 155.00,
+      yearlyPrice: 1488.00,
       description: "Uma solução completa para franquias e grandes empresas que precisam de controle avançado, automação e suporte dedicado para gerenciar sua reputação em escala.",
       features: [
         "E-mail Mensal: 1000",
@@ -90,14 +103,19 @@ export const Pricing: React.FC = () => {
               <div className={`w-6 h-6 bg-indigo-500 rounded-full shadow-md transform transition-transform duration-300 ${billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'}`}></div>
             </button>
             <span className={`text-sm font-medium ${billingCycle === 'yearly' ? 'text-white' : 'text-slate-400'}`}>
-              Anual <span className="text-green-400 text-xs ml-1 font-bold">(Economize 20%)</span>
+              Anual <span className="text-green-400 text-xs ml-1 font-bold">(Economize {Math.round(((tiers[1].monthlyPrice * 12 - tiers[1].yearlyPrice) / (tiers[1].monthlyPrice * 12)) * 100)}%)</span>
             </span>
           </div>
         </div>
 
         {/* Pricing Grid - Added more gap and refined vertical alignment */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start pt-8">
-          {tiers.map((tier, index) => (
+          {tiers.map((tier, index) => {
+            const displayPrice = billingCycle === 'monthly' ? tier.monthlyPrice : (tier.yearlyPrice / 12);
+            const monthlyEquivalent = tier.yearlyPrice / 12;
+            const savings = (tier.monthlyPrice * 12) - tier.yearlyPrice;
+
+            return (
             <div 
               key={index}
               className={`relative flex flex-col h-full rounded-3xl p-8 transition-all duration-300 border ${
@@ -125,11 +143,13 @@ export const Pricing: React.FC = () => {
                 </div>
                 
                 <div className="flex items-baseline mb-2">
-                  <span className="text-5xl font-extrabold tracking-tight">{tier.price}</span>
+                  <span className="text-5xl font-extrabold tracking-tight">{formatPrice(displayPrice)}</span>
                   <span className={`ml-2 text-sm font-medium ${tier.recommended ? 'text-slate-500' : 'text-slate-400'}`}>/mês</span>
                 </div>
                 {billingCycle === 'yearly' && (
-                  <p className="text-xs text-green-500 font-semibold mb-4">Faturado anualmente</p>
+                  <p className="text-xs text-green-500 font-semibold mb-4">
+                    Faturado anualmente - Economize {formatPrice(savings)}
+                  </p>
                 )}
                 <p className={`text-sm leading-relaxed ${tier.recommended ? 'text-slate-600' : 'text-slate-300'}`}>
                   {tier.description}
@@ -164,7 +184,7 @@ export const Pricing: React.FC = () => {
                 <p className={`text-center text-xs ${tier.recommended ? 'text-slate-500' : 'text-slate-400'}`}>Cancele a qualquer momento</p>
               </div>
             </div>
-          ))}
+          );})}
         </div>
       </div>
     </section>
