@@ -19,6 +19,8 @@ import {
 } from '@heroicons/react/24/outline';
 import { FreeTrialNavbar } from './FreeTrialNavbar';
 import { FreeTrialFooter } from './FreeTrialFooter';
+import { ProductShowcase } from '../../components/ProductShowcase';
+import { AIDemo } from '../../components/AIDemo';
 
 export const FreeTrialLandingPage: React.FC = () => {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
@@ -147,18 +149,7 @@ export const FreeTrialLandingPage: React.FC = () => {
                 </a>
               </div>
               
-              <div className="flex items-center mt-8">
-                <div className="flex -space-x-2 mr-4">
-                  {[1,2,3,4].map((i) => (
-                    <div key={i} className="h-10 w-10 rounded-full bg-indigo-200 border-2 border-white flex items-center justify-center text-indigo-600 font-bold text-sm">
-                      {i === 4 ? '+' : ''}
-                    </div>
-                  ))}
-                </div>
-                <p className="text-slate-600 text-lg">
-                  Junte-se a <span className="text-slate-900 font-semibold">+500 empresas</span> que já <span className="text-indigo-600 font-semibold">triplicaram suas avaliações</span>
-                </p>
-              </div>
+
             </div>
             
             <div className="w-full md:w-1/2 md:pl-12">
@@ -226,6 +217,10 @@ export const FreeTrialLandingPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <ProductShowcase onTryFree={() => window.location.href = "https://login.reviewhubsaas.com/#/plan/695b5ccc371343fe75c8364f"} />
+
+      <AIDemo />
 
       {/* Social Proof */}
       <section className="py-8 bg-slate-50">
