@@ -7,13 +7,27 @@ const PopupWidget: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const lastShown = localStorage.getItem(POPUP_LAST_SHOWN_KEY);
-    const now = new Date().getTime();
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = (scrollY / documentHeight) * 100;
 
-    if (!lastShown || (now - parseInt(lastShown, 10) > TWO_DAYS_IN_MS)) {
-      setIsVisible(true);
-      localStorage.setItem(POPUP_LAST_SHOWN_KEY, now.toString());
-    }
+      const lastShown = localStorage.getItem(POPUP_LAST_SHOWN_KEY);
+      const now = new Date().getTime();
+
+      if (scrollPercentage >= 35 && (!lastShown || (now - parseInt(lastShown, 10) > TWO_DAYS_IN_MS))) {
+        setIsVisible(true);
+        localStorage.setItem(POPUP_LAST_SHOWN_KEY, now.toString());
+        window.removeEventListener('scroll', handleScroll); // Remove listener once shown
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const handleClose = () => {
