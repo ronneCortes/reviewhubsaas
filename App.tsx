@@ -17,7 +17,7 @@ import LegalPagesContainer from './components/LegalPagesContainer';
 import NotFoundPage from './components/NotFoundPage';
 import { FreeTrialPage } from './components/FreeTrialPage';
 import { FreeTrialLandingPage } from './src/components/FreeTrialLandingPage';
-import { MainLayout } from './src/components/MainLayout';
+import { MainLayout } from '@/src/components/MainLayout';
 
 const App: React.FC = () => {
   const scrollToSection = (id: string) => {

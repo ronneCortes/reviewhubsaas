@@ -11,7 +11,7 @@ interface MainLayoutProps {
 
 export const MainLayout: React.FC<MainLayoutProps> = ({ children, scrollToSection }) => {
   const location = useLocation();
-  const showNavAndFooter = location.pathname !== '/free-trial';
+  const showNavAndFooter = true;
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">

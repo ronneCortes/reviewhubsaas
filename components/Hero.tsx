@@ -1,12 +1,12 @@
 import React from 'react';
 import { ChevronRight, Star, ShieldCheck, TrendingUp, Globe, Box, ExternalLink } from 'lucide-react';
+import { ExternalPlanButton } from '../src/components/ExternalPlanButton';
 
 interface HeroProps {
-  onCtaClick: () => void;
   onDemoClick?: () => void; // Kept for interface compatibility but unused for demo button now
 }
 
-export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
+export const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
   return (
     <section id="hero" className="relative pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden bg-slate-50">
       
@@ -36,13 +36,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
-              <button 
-                onClick={onCtaClick}
-                className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-1 flex items-center justify-center"
-              >
-                Teste Grátis
-                <ChevronRight className="ml-2 w-5 h-5" />
-              </button>
+              <ExternalPlanButton buttonText="Teste Grátis" className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-1 flex items-center justify-center" />
               
               <a 
                 href="https://reviewhubsaas.com/live-demo-review-hub"

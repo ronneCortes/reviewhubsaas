@@ -200,12 +200,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
                 >
                   Entrar
                 </a>
-                <button 
-                  onClick={() => onNavigate('pricing')}
+                <a 
+                  href="https://login.reviewhubsaas.com/#/plan/695b5ccc371343fe75c8364f"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-indigo-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-indigo-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
                 >
                   Teste Grátis
-                </button>
+                </a>
               </div>
             </div>
 
@@ -305,12 +307,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
                 >
                   Entrar
                 </a>
-                <button 
-                  onClick={() => handleLinkClick('pricing')}
+                <a 
+                  href="https://login.reviewhubsaas.com/#/plan/695b5ccc371343fe75c8364f"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mobile-action-button block w-full bg-indigo-600 text-white px-6 py-4 rounded-xl text-lg font-bold shadow-lg text-center hover:bg-indigo-700 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Teste Grátis
-                </button>
+                </a>
               </div>
             </div>
           </div>

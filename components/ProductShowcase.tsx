@@ -20,13 +20,13 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
         <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-16 lg:gap-20 mb-20 md:mb-28 lg:mb-32">
           {/* Visual Side */}
           <div className="lg:w-1/2 order-2 lg:order-1 relative group flex justify-center lg:justify-end w-full px-2">
-             <div className="relative w-full max-w-full lg:max-w-[500px] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
+             <div className="relative w-full max-w-full lg:max-w-[500px] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] flex flex-col items-center gap-8 lg:block">
                 
                 {/* Background Decor */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-blue-100 to-indigo-100 rounded-full blur-2xl lg:blur-3xl -z-10 opacity-60"></div>
 
                 {/* Layer 1: The Desktop Widget Card (Background) */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-[85%] sm:w-[80%] md:w-[85%] lg:w-[90%] bg-white rounded-xl lg:rounded-2xl shadow-lg lg:shadow-xl border border-slate-100 p-4 md:p-6 z-10 transform -rotate-1 lg:-rotate-2 transition-transform duration-500 hover:rotate-0">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full sm:w-[80%] md:w-[85%] lg:w-[90%] bg-white rounded-xl lg:rounded-2xl shadow-lg lg:shadow-xl border border-slate-100 p-4 md:p-6 z-10 transform -rotate-1 lg:-rotate-2 transition-transform duration-500 hover:rotate-0 lg:left-0 lg:translate-x-0">
                     {/* Header Sources */}
                     <div className="flex justify-center items-center gap-4 md:gap-6 mb-4 md:mb-6">
                         <div className="flex items-center gap-1 md:gap-2">
@@ -75,7 +75,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
                 </div>
 
                 {/* Layer 2: The Mobile Phone (Foreground) */}
-                <div className="absolute bottom-0 right-1/2 translate-x-1/2 lg:right-0 lg:translate-x-0 w-[160px] sm:w-[180px] md:w-[200px] lg:w-[240px] xl:w-[260px] bg-black rounded-[1.8rem] md:rounded-[2rem] lg:rounded-[2.5rem] border-[6px] md:border-[8px] border-slate-900 overflow-hidden shadow-xl lg:shadow-2xl z-20 transform translate-y-4 md:translate-y-4 lg:translate-x-4">
+                <div className="absolute bottom-0 right-1/4 translate-x-1/2 w-[160px] sm:w-[180px] md:w-[200px] lg:w-[240px] xl:w-[260px] bg-black rounded-[1.8rem] md:rounded-[2rem] lg:rounded-[2.5rem] border-[6px] md:border-[8px] border-slate-900 overflow-hidden shadow-xl lg:shadow-2xl z-20 transform translate-y-4 md:translate-y-4 lg:translate-x-4 lg:right-0 lg:translate-x-0">
                     {/* Status Bar Mock */}
                     <div className="bg-white px-4 md:px-6 pt-2 md:pt-3 pb-0.5 md:pb-1 flex justify-between items-center text-[8px] md:text-[10px] font-bold text-slate-900">
                         <span>9:41</span>

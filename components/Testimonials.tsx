@@ -56,9 +56,9 @@ export const Testimonials: React.FC = () => {
            <p className="text-slate-500 max-w-2xl mx-auto">Junte-se às +1.000 empresas que assumiram o controle de sua reputação online.</p>
         </div>
         
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
-            <div key={i} className="break-inside-avoid bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300">
+            <div key={i} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300">
               <div className="flex gap-1 mb-6">
                   {[1,2,3,4,5].map(star => (
                       <Star key={star} size={16} className="text-yellow-400 fill-yellow-400" />
