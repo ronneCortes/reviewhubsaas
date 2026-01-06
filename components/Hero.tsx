@@ -12,8 +12,8 @@ export const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
       
       {/* Abstract background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute -top-[20%] -right-[10%] w-[700px] h-[700px] bg-purple-200/30 rounded-full blur-3xl mix-blend-multiply"></div>
-        <div className="absolute top-[20%] -left-[10%] w-[500px] h-[500px] bg-indigo-200/30 rounded-full blur-3xl mix-blend-multiply"></div>
+        <div className="absolute -top-[20%] -right-[10%] w-175 h-175 bg-purple-200/30 rounded-full blur-3xl mix-blend-multiply"></div>
+        <div className="absolute top-[20%] -left-[10%] w-125 h-125 bg-indigo-200/30 rounded-full blur-3xl mix-blend-multiply"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight mb-8 leading-[1.1]">
               Transforme Avaliações em <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Crescimento de Receita</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-purple-600">Crescimento de Receita</span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
@@ -70,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
           </div>
 
           {/* Visual Content */}
-          <div className="flex-1 w-full relative animate-fade-in opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+          <div className="flex-1 w-full relative animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
             <div className="relative group perspective-1000">
               {/* Main Hero Image from ReviewHub */}
               <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-slate-200/50 bg-white transform transition-transform duration-700 hover:scale-[1.02] hover:rotate-1">
@@ -78,17 +78,19 @@ export const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
                    src="https://reviewhubsaas.com/wp-content/uploads/2024/04/dashbord-desktop.png" 
                    alt="ReviewHub Dashboard" 
                    className="w-full h-auto"
+                   width="1200"
+                   height="800"
                  />
                  
                  {/* Glass overlay effect on bottom */}
-                 <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/20 to-transparent pointer-events-none"></div>
+                 <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-white/20 to-transparent pointer-events-none"></div>
               </div>
               
               {/* Decorative background blobs behind the image */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-linear-to-tr from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl -z-10"></div>
               
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float z-20 hidden md:flex">
+              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 items-center gap-3 animate-float z-20 hidden md:flex">
                  <div className="bg-green-100 p-2.5 rounded-lg text-green-600">
                     <TrendingUp size={24} />
                  </div>

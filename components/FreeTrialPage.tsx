@@ -8,7 +8,7 @@ export const FreeTrialPage: React.FC = () => {
       <div className="max-w-4xl w-full bg-slate-800 rounded-lg shadow-xl p-8 md:p-12 text-center relative overflow-hidden">
         {/* Logo and Title */}
         <div className="absolute top-8 left-8 flex items-center space-x-2">
-          <img src="/icon.png" alt="Review Hub Logo" className="h-8 w-8" />
+          <img src="/icon.png" alt="Review Hub Logo" className="h-8 w-8" width="32" height="32" />
           <span className="text-xl font-bold text-white">Review Hub</span>
         </div>
 

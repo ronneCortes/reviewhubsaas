@@ -20,10 +20,10 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
         <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-16 lg:gap-20 mb-20 md:mb-28 lg:mb-32">
           {/* Visual Side */}
           <div className="lg:w-1/2 order-2 lg:order-1 relative group flex justify-center lg:justify-end w-full px-2">
-             <div className="relative w-full max-w-full lg:max-w-[500px] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] flex flex-col items-center gap-8 lg:block">
+             <div className="relative w-full max-w-full lg:max-w-125 h-87.5 sm:h-100 md:h-112.5 lg:h-125 flex flex-col items-center gap-8 lg:block">
                 
                 {/* Background Decor */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-blue-100 to-indigo-100 rounded-full blur-2xl lg:blur-3xl -z-10 opacity-60"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-120 h-120 bg-linear-to-tr from-blue-100 to-indigo-100 rounded-full blur-2xl lg:blur-3xl -z-10 opacity-60"></div>
 
                 {/* Layer 1: The Desktop Widget Card (Background) */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full sm:w-[80%] md:w-[85%] lg:w-[90%] bg-white rounded-xl lg:rounded-2xl shadow-lg lg:shadow-xl border border-slate-100 p-4 md:p-6 z-10 transform -rotate-1 lg:-rotate-2 transition-transform duration-500 hover:rotate-0 lg:left-0 lg:translate-x-0">
@@ -62,7 +62,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
                             <div className="text-[#1877F2]"><Facebook className="w-3.5 h-3.5 md:w-4.5 md:h-4.5" /></div>
                         </div>
                         <div className="flex text-yellow-400 mb-1 md:mb-2">
-                             {[1,2,3,4,5].map(i => <Star key={i} className="w-2.5 h-2.5 md:w-3 h-3" fill="currentColor" />)}
+                             {[1,2,3,4,5].map(i => <Star key={i} className="w-2.5 h-3 md:w-3" fill="currentColor" />)}
                         </div>
                         <p className="text-slate-600 text-xs md:text-sm leading-relaxed line-clamp-3">
                             Serviço excelente. Equipe simpática, mas ao mesmo tempo muito amigável e profissional, recomendo!
@@ -75,7 +75,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
                 </div>
 
                 {/* Layer 2: The Mobile Phone (Foreground) */}
-                <div className="absolute bottom-0 right-1/4 translate-x-1/2 w-[160px] sm:w-[180px] md:w-[200px] lg:w-[240px] xl:w-[260px] bg-black rounded-[1.8rem] md:rounded-[2rem] lg:rounded-[2.5rem] border-[6px] md:border-[8px] border-slate-900 overflow-hidden shadow-xl lg:shadow-2xl z-20 transform translate-y-4 md:translate-y-4 lg:translate-x-4 lg:right-0 lg:translate-x-0">
+                <div className="absolute bottom-0 right-1/4 translate-x-1/2 w-40 sm:w-45 md:w-50 lg:w-60 xl:w-65 bg-black rounded-7xl md:rounded-4xl lg:rounded-10xl border-6 md:border-8 border-slate-900 overflow-hidden shadow-xl lg:shadow-2xl z-20 transform translate-y-4 md:translate-y-4 lg:right-0 lg:translate-x-0">
                     {/* Status Bar Mock */}
                     <div className="bg-white px-4 md:px-6 pt-2 md:pt-3 pb-0.5 md:pb-1 flex justify-between items-center text-[8px] md:text-[10px] font-bold text-slate-900">
                         <span>9:41</span>
@@ -95,7 +95,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
                     {/* Stories Mock */}
                     <div className="bg-white p-2 md:p-3 flex gap-2 md:gap-3 overflow-hidden border-b border-slate-50">
                         {[1,2,3].map(i => (
-                             <div key={i} className="flex flex-col items-center gap-1 min-w-[35px] md:min-w-[45px]">
+                             <div key={i} className="flex flex-col items-center gap-1 min-w-8.75 md:min-w-11.25">
                                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-pink-500 p-0.5">
                                     <div className="w-full h-full bg-slate-200 rounded-full overflow-hidden">
                                         <img src={`https://i.pravatar.cc/150?u=${i+20}`} className="w-full h-full object-cover"/>
@@ -179,19 +179,19 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
             
             <div className="flex flex-col gap-3 md:gap-4">
                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                     <CheckCircle2 className="w-3 h-3" />
                   </div>
                   <span className="text-slate-700 text-sm md:text-base">Geração de resposta com um clique</span>
                </div>
                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                     <CheckCircle2 className="w-3 h-3" />
                   </div>
                   <span className="text-slate-700 text-sm md:text-base">Tom e tamanho personalizáveis</span>
                </div>
                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                     <CheckCircle2 className="w-3 h-3" />
                   </div>
                   <span className="text-slate-700 text-sm md:text-base">Entendimento de contexto humano</span>
@@ -292,7 +292,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
           <div className="lg:w-1/2 order-2 lg:order-1 relative group w-full px-2 sm:px-4">
                
                {/* Container for the Composition */}
-               <div className="relative w-full aspect-[4/3] md:aspect-[16/10] bg-transparent perspective-1000">
+               <div className="relative w-full aspect-video md:aspect-video bg-transparent perspective-1000">
                   
                   {/* --- 1. Background Dashboard (Desktop) --- */}
                   <div className="absolute inset-0 bg-white rounded-lg md:rounded-xl shadow-xl border border-slate-200 overflow-hidden flex transform transition-transform duration-700 group-hover:rotate-1 group-hover:scale-[1.01]">
@@ -403,7 +403,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
                               <div key={i} className="flex justify-between items-center text-[8px] md:text-[10px]">
                                   <div className="flex items-center gap-1 md:gap-1.5">
                                       <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                                      <span className="text-slate-700 font-semibold truncate max-w-[60px] md:max-w-none">{u.n}</span>
+                                      <span className="text-slate-700 font-semibold truncate max-w-15 md:max-w-none">{u.n}</span>
                                   </div>
                                   <span className={`font-bold ${u.c} flex items-center gap-0.5`}>
                                       {u.s === 'Solicitado' && <Star className="w-1.5 h-1.5 md:w-2 md:h-2" fill="currentColor" />} {u.s}
@@ -414,7 +414,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
                   </div>
 
                   {/* --- 3. Bottom Left Phone (Widget) --- */}
-                  <div className="absolute -bottom-4 -left-2 sm:-left-4 w-20 sm:w-24 md:w-28 lg:w-36 bg-black rounded-[1rem] sm:rounded-[1.2rem] md:rounded-[1.5rem] border-[3px] sm:border-[4px] border-slate-800 overflow-hidden shadow-lg md:shadow-xl lg:shadow-2xl z-30 transform hover:-translate-y-1 md:hover:-translate-y-2 transition-transform duration-300">
+                  <div className="absolute -bottom-4 -left-2 sm:-left-4 w-20 sm:w-24 md:w-28 lg:w-36 bg-black rounded-2xl sm:rounded-[1.2rem] md:rounded-3xl border-[3px] sm:border-4 border-slate-800 overflow-hidden shadow-lg md:shadow-xl lg:shadow-2xl z-30 transform hover:-translate-y-1 md:hover:-translate-y-2 transition-transform duration-300">
                       <div className="bg-white h-full pb-2 md:pb-4">
                           <div className="bg-slate-50 p-1 md:p-2 border-b border-slate-100 mb-1 md:mb-2">
                               <div className="w-10 sm:w-12 md:w-16 h-1 md:h-2 bg-slate-200 rounded-full mx-auto"></div>
@@ -441,10 +441,10 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
                   </div>
 
                   {/* --- 4. Bottom Right Phone (Instagram Story) --- */}
-                  <div className="absolute -bottom-8 -right-2 sm:-right-2 w-24 sm:w-28 md:w-32 lg:w-40 bg-black rounded-[1.2rem] sm:rounded-[1.5rem] md:rounded-[1.8rem] border-[4px] sm:border-[5px] md:border-[6px] border-slate-800 overflow-hidden shadow-lg md:shadow-xl lg:shadow-2xl z-30 transform hover:-translate-y-1 md:hover:-translate-y-2 transition-transform duration-300">
+                  <div className="absolute -bottom-8 -right-2 sm:-right-2 w-24 sm:w-28 md:w-32 lg:w-40 bg-black rounded-[1.2rem] sm:rounded-3xl md:rounded-[1.8rem] border-4 sm:border-[5px] md:border-[6px] border-slate-800 overflow-hidden shadow-lg md:shadow-xl lg:shadow-2xl z-30 transform hover:-translate-y-1 md:hover:-translate-y-2 transition-transform duration-300">
                        <div className="bg-slate-800 h-full relative">
                            {/* Story Background */}
-                           <div className="absolute inset-0 bg-gradient-to-b from-slate-700 to-slate-900 opacity-90"></div>
+                           <div className="absolute inset-0 bg-linear-to-b from-slate-700 to-slate-900 opacity-90"></div>
                            <div className="relative p-2 md:p-3 h-full flex flex-col justify-center">
                                {/* The 'Sticker' */}
                                <div className="bg-white rounded-lg p-1.5 md:p-2 shadow-lg transform rotate-1 md:rotate-2">
@@ -471,8 +471,8 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
                </div>
                
                {/* Decorative background blob */}
-               <div className="absolute -top-6 -left-6 w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] bg-blue-500/10 rounded-full blur-2xl -z-10"></div>
-               <div className="absolute -bottom-6 -right-6 w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] bg-indigo-500/10 rounded-full blur-2xl -z-10"></div>
+               <div className="absolute -top-6 -left-6 w-50 h-50 md:w-62.5 md:h-62.5 lg:w-75 lg:h-75 bg-blue-500/10 rounded-full blur-2xl -z-10"></div>
+               <div className="absolute -bottom-6 -right-6 w-50 h-50 md:w-62.5 md:h-62.5 lg:w-75 lg:h-75 bg-indigo-500/10 rounded-full blur-2xl -z-10"></div>
           </div>
 
           {/* Content Side */}
@@ -487,7 +487,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
              <div className="space-y-6 md:space-y-8 mt-6 md:mt-8">
                 {/* Item 1 */}
                 <div className="flex group">
-                   <div className="flex-shrink-0 mt-1">
+                   <div className="shrink-0 mt-1">
                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-indigo-50 flex items-center justify-center border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
                         <Globe className="w-4 h-4 md:w-5 md:h-5 text-indigo-600 group-hover:text-white" />
                      </div>
@@ -500,7 +500,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
 
                 {/* Item 2 */}
                 <div className="flex group">
-                   <div className="flex-shrink-0 mt-1">
+                   <div className="shrink-0 mt-1">
                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-indigo-50 flex items-center justify-center border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
                         <Bell className="w-4 h-4 md:w-5 md:h-5 text-indigo-600 group-hover:text-white" />
                      </div>
@@ -513,7 +513,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onTryFree }) =
 
                 {/* Item 3 */}
                 <div className="flex group">
-                   <div className="flex-shrink-0 mt-1">
+                   <div className="shrink-0 mt-1">
                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-indigo-50 flex items-center justify-center border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
                         <BarChart3 className="w-4 h-4 md:w-5 md:h-5 text-indigo-600 group-hover:text-white" />
                      </div>

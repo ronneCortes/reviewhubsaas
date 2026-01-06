@@ -12,6 +12,8 @@ const ThankYouTrialPage: React.FC = () => {
             src="/icon.png" // Adjust path as needed
             alt="Review Hub Logo"
             className="h-10"
+            width="40"
+            height="40"
           />
           <span className="ml-3 text-xl font-bold text-white">Review Hub</span>
         </Link>
@@ -51,7 +53,7 @@ const ThankYouTrialPage: React.FC = () => {
                 <div className="space-y-8">
                   {/* Step 1 */}
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    <div className="shrink-0 w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
                       1
                     </div>
                     <div>
@@ -68,7 +70,7 @@ const ThankYouTrialPage: React.FC = () => {
                   </div>
                   {/* Step 2 */}
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    <div className="shrink-0 w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
                       2
                     </div>
                     <div>
@@ -85,7 +87,7 @@ const ThankYouTrialPage: React.FC = () => {
                   </div>
                   {/* Step 3 */}
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    <div className="shrink-0 w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
                       3
                     </div>
                     <div>

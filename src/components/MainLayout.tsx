@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import PopupWidget from '../../components/PopupWidget';
+import "../index.css";
 
 interface MainLayoutProps {
   children: React.ReactNode;

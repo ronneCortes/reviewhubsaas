@@ -158,7 +158,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               className="flex items-center group focus:outline-none"
             >
               <div className="text-white p-1.5 rounded-lg mr-2 shadow-sm  transition-colors">
-                <img src="/icon.png" alt="Review Hub Logo" className="h-5 w-5" />
+                <img src="/icon.png" alt="Review Hub Logo" className="h-5 w-5" width="20" height="20" />
               </div>
               <span className="text-xl font-bold tracking-tight text-slate-900 group-hover:text-indigo-600 transition-colors">
                 Review Hub
