@@ -179,7 +179,7 @@ export const Pricing: React.FC = () => {
                     ? 'bg-slate-900 text-white hover:bg-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-1'
                     : 'bg-white/10 text-white hover:bg-white/20 border border-white/10 hover:-translate-y-1'
                 }`}>
-                  TESTE GRÁTIS
+                  Ativar Plano
                 </a>
                 <p className={`text-center text-xs ${tier.recommended ? 'text-slate-500' : 'text-slate-400'}`}>Cancele a qualquer momento</p>
               </div>
